@@ -8,7 +8,7 @@ template.innerHTML = `
                 color:blue;
             }
         </style>
-        <p class ="texto">This app is abaut </p>
+        <p class ="texto">This app is about </p>
         <p>the history of an Avocado</p>
     `
 //definicion de la clase
