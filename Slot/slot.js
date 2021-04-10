@@ -9,8 +9,14 @@ class myElement extends HTMLElement{//el HTMLElement es necesario para la creaci
         template.innerHTML = `
             <section>
                 <h2>
-                    <slot></slot>
+                    <slot name = "title"></slot>
                 </h2>
+                <div>
+                    <p>
+                        <slot name = "parragraph">
+                        </slot>
+                    </p>
+                </div>
             </section>
             ${this.GetStyle()}
         `;
