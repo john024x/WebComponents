@@ -3,10 +3,23 @@ class myElement extends HTMLElement{//el HTMLElement es necesario para la creaci
     constructor(){
         super();
         this.attachShadow({mode: 'open'});//el nodo tiene que estar abierto para que pueda interactuar con los demas elementos
-        this.title = this.getAttribute('title'); //obtener el atributo de la etiqueta
-        this.parrafo = this.getAttribute('parrafo');
-        this.img = this.getAttribute('img');
-        this.width = this.getAttribute('width');
+    }
+    static get observedAttribute(){
+        return ('title','parrafo','img','width');
+    }
+    attributeChangedCallback(attr,oldval,newVal){
+        if(attr === 'title'){
+            this.title = newVal;
+        }
+        if(attr == 'parrafo'){
+            this.parrafo = newVal;
+        }
+        if(attr == 'img'){
+            this.img = newVal;
+        }
+        if(attr == 'width'){
+            this.width = newVal;
+        }
     }
     getTemplate(){
         const template = document.createElement("template");
