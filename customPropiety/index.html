@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Element</title>
+    <style>
+        happy-hacking{
+            --primary-color: rgb(67, 67, 163);
+        }
+        .second{
+            --primary-color: aquamarine;
+        }
+        .third{
+            --secondary-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <script type="module"src="./customPropiety.js"></script> 
+    <happy-hacking>
+        <span slot ="title"> Happy hacking</span>
+        <span slot ="parragraph"> Greetings from a "p" tag! </span>
+    </happy-hacking>
+    <happy-hacking class ="second">
+        <span slot ="title"> Happy hacking 2</span>
+        <span slot ="parragraph"> Greetings from a "p" tag 2! </span>
+    </happy-hacking>
+    <happy-hacking class ="third">
+        <span slot ="title"> Happy hacking 3</span>
+        <span slot ="parragraph"> Greetings from a "p" tag! 3</span>
+    </happy-hacking>
+</body>
+</html>
